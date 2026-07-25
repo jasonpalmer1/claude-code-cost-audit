@@ -1,0 +1,29 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+venv/
+.venv/
+env/
+.mypy_cache/
+.pytest_cache/
+.ruff_cache/
+
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# Editors
+.vscode/
+.idea/
+*.swp
+
+# Local test/output artifacts (in case CLAUDE_COST_* is pointed in-repo
+# during testing -- the real ledger lives under ~/.claude, not here)
+cost-ledger.md
+cost-alarms.log
+cost-audit-errors.log
+*.tmp-*

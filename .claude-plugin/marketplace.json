@@ -1,0 +1,20 @@
+{
+  "name": "claude-code-cost-audit",
+  "owner": {
+    "name": "Jason Palmer",
+    "url": "https://github.com/jasonpalmer1"
+  },
+  "plugins": [
+    {
+      "name": "claude-code-cost-audit",
+      "source": "./",
+      "description": "Per-session cost accounting for Claude Code transcripts, plus a subagent model-inheritance guard.",
+      "version": "0.1.0",
+      "author": {
+        "name": "Jason Palmer",
+        "url": "https://github.com/jasonpalmer1"
+      },
+      "license": "MIT"
+    }
+  ]
+}

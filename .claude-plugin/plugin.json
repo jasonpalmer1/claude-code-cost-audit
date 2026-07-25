@@ -1,0 +1,15 @@
+{
+  "name": "claude-code-cost-audit",
+  "displayName": "Claude Code Cost Audit",
+  "version": "0.1.0",
+  "description": "Per-session cost accounting for Claude Code transcripts (including nested subagent/workflow transcripts), a delegation-ratio alarm, and a hook that blocks subagent spawns with no explicit model.",
+  "author": {
+    "name": "Jason Palmer",
+    "url": "https://github.com/jasonpalmer1"
+  },
+  "homepage": "https://github.com/jasonpalmer1/claude-code-cost-audit",
+  "repository": "https://github.com/jasonpalmer1/claude-code-cost-audit",
+  "license": "MIT",
+  "keywords": ["cost", "tokens", "budget", "delegation", "hooks", "subagents", "observability"],
+  "hooks": "./hooks/hooks.json"
+}
