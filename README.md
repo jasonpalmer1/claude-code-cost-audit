@@ -2,8 +2,8 @@
 
 I built my own cost accounting over Claude Code transcripts. It silently
 missed nested workflow subagent transcripts. 13 sessions under-reported;
-correcting it surfaced an additional $1,284.93 — 8.1% of spend I thought I
-was already measuring.
+correcting it surfaced roughly 8% of spend I thought I was already
+measuring.
 
 That was a bug in my own parser, not a claim about Claude Code or about
 Anthropic's billing. Nothing here says anyone was overcharged, and nothing
