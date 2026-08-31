@@ -132,10 +132,36 @@ real sessions -- illustrating the shape of the table, nothing more:
 | 2026-01-05 | demo0001 | 128,400 | 9,200 | 42,000 | 610,000 | 76% | $4.12 | haiku=$0.41 sonnet=$3.71 |
 | 2026-01-06 | demo0002 | 55,000 | 3,100 | 12,000 | 88,000 | 55% | $0.98 | haiku=$0.98 |
 | 2026-01-07 | demo0003 | 900,000 | 61,000 | 210,000 | 1,450,000 | 63% | $18.60 | opus=$14.02 sonnet=$4.58 |
+| 2026-01-08 | demo0004 | 210,000 | 14,500 | 60,000 | 340,000 | 58% | $67.30 | sonnet=$67.30 |
 
 Run `token-ledger.py --report` (or `/cost` inside Claude Code) to print an
 overview instead: total spend, sessions logged, spend by tier, the most
 expensive sessions, and whether the delegation alarm has fired.
+
+Example output (synthetic data -- the four demo rows above, run through
+`--report` unmodified; this is real output from the script, not a mockup):
+
+```
+$ python3 token-ledger.py --report
+Ledger: ~/.claude/cost-ledger.md
+Sessions: 4   Total: $91.00   Avg/session: $22.75
+
+By tier:
+  sonnet   $75.59  (83%)
+  opus     $14.02  (15%)
+  haiku    $1.39  (2%)
+
+Most expensive sessions:
+  2026-01-08  demo0004  $67.30
+  2026-01-07  demo0003  $18.60
+  2026-01-05  demo0001  $4.12
+
+Delegation alarms logged: 1 (see ~/.claude/cost-alarms.log)
+```
+
+`demo0004` is there specifically to trip the delegation alarm (single-tier
+cost over the default $50 threshold) so the report's last line has
+something to show -- `demo0001` through `demo0003` alone never cross it.
 
 ## The delegation alarm
 
